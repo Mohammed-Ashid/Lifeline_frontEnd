@@ -1,0 +1,397 @@
+/* LifeLineFeed.css */
+.lifeline-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .feed-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .feed-header h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  .feed-filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    background-color: white;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-btn:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
+  .filter-icon {
+    font-size: 0.8rem;
+  }
+  
+  /* Post creation area */
+  .post-create {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+  }
+  
+  .post-input {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .create-input {
+    flex-grow: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+  }
+  
+  .create-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .post-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .post-btn.request {
+    background-color: var(--primary-light);
+    color: white;
+  }
+  
+  .post-btn.request:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .post-btn.donate {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .post-btn.donate:hover {
+    background-color: #e55c5c;
+  }
+  
+  /* Feed posts */
+  .feed-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .post-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .post-card.request {
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .post-card.donation {
+    border-left: 4px solid var(--secondary-color);
+  }
+  
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .post-user {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  
+  .user-info h4 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .verified-badge {
+    color: #1da1f2;
+    font-size: 0.8rem;
+  }
+  
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+  
+  .post-time, .post-location {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .post-type-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+  }
+  
+  .type-indicator {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+  }
+  
+  .type-indicator.request {
+    background-color: rgba(78, 84, 200, 0.1);
+    color: var(--primary-color);
+  }
+  
+  .type-indicator.donation {
+    background-color: rgba(255, 107, 107, 0.1);
+    color: var(--secondary-color);
+  }
+  
+  .category-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    color: var(--text-light);
+    text-transform: capitalize;
+  }
+  
+  .post-content {
+    padding: 1rem;
+  }
+  
+  .post-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .urgency-badge {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-weight: 700;
+  }
+  
+  .urgency-critical {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  .urgency-urgent {
+    background-color: #ff9966;
+    color: white;
+  }
+  
+  .urgency-high {
+    background-color: #ffcc00;
+    color: #333;
+  }
+  
+  .urgency-standard {
+    background-color: #66cc99;
+    color: white;
+  }
+  
+  .post-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+  
+  .post-footer {
+    display: flex;
+    border-top: 1px solid #f0f0f0;
+    padding: 0.7rem 1rem;
+  }
+  
+  .post-action {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  .post-action.connect {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #3f51b5;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+  /* LifeLineFeed.css */
+
+/* Style for the icon avatar */
+.user-avatar-icon {
+  font-size: 40px; /* Adjust size as needed */
+  color: #4a90e2; /* A nice blue color, adjust to match your theme */
+  border-radius: 50%; /* Makes it circular */
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 5px; /* Adds some padding inside the circle */
+  margin-right: 10px; /* Space between avatar and text */
+  transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.user-avatar-icon:hover {
+  transform: scale(1.1); /* Slight zoom on hover for interactivity */
+}
+
+/* Adjust the post-input layout */
+.post-input {
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure the user info aligns nicely with the icon */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Optional: Add a subtle shadow for depth */
+.post-user .user-avatar-icon {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  .post-action.connect:hover {
+    color: #1976d2;
+  }
+  .post-action:hover {
+    color: var(--primary-color);
+  }
+  
+  .post-action.active {
+    color: var(--primary-color);
+  }
+  
+  .post-action.save {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .post-action.save.active {
+    color: var(--primary-color);
+  }
+  
+  .no-posts {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  
+  .no-posts h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .no-posts p {
+    color: var(--text-light);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .post-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .post-type-badge {
+      align-items: flex-start;
+    }
+    
+    .post-footer {
+      overflow-x: auto;
+      padding: 0.7rem;
+    }
+    
+    .post-action {
+      margin-right: 1rem;
+    }
+  }

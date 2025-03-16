@@ -1,0 +1,314 @@
+/* CurrentUser.css */
+.current-user-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* Header styles */
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 16px 0;
+  }
+  
+  .header-line {
+    height: 4px;
+    width: 60px;
+    background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+    border-radius: 2px;
+  }
+  
+  /* Loading state */
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+  }
+  
+  .loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .spinner-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+  }
+  
+  .user-icon-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #3a7bd5;
+    z-index: 2;
+  }
+  
+  .spinner-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid rgba(58, 123, 213, 0.1);
+    border-top: 4px solid #3a7bd5;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Error state */
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 24px;
+    text-align: center;
+  }
+  
+  .error-icon {
+    font-size: 48px;
+    color: #e74c3c;
+    margin-bottom: 16px;
+  }
+  
+  .retry-button {
+    margin-top: 24px;
+    padding: 10px 20px;
+    background-color: #3a7bd5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .retry-button:hover {
+    background-color: #2a5db2;
+  }
+  
+  /* User profile card */
+  .user-profile-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .profile-header-section {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    background: linear-gradient(135deg, #f6f9fc 0%, #f1f5f9 100%);
+  }
+  
+  .profile-avatar-container {
+    position: relative;
+    margin-right: 24px;
+  }
+  
+  .user-avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-avatar-icon {
+    width: 88px;
+    height: 88px;
+    color: #95a5a6;
+    background-color: #ecf0f1;
+    border-radius: 50%;
+    padding: 4px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .status-indicator {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .status-active {
+    background-color: #2ecc71;
+  }
+  
+  .status-pending {
+    background-color: #f39c12;
+  }
+  
+  .status-suspended {
+    background-color: #e74c3c;
+  }
+  
+  .status-unknown {
+    background-color: #95a5a6;
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .user-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 8px 0;
+  }
+  
+  .user-role {
+    font-size: 16px;
+    color: #718096;
+    margin-bottom: 12px;
+  }
+  
+  .user-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+  }
+  
+  /* Profile details section */
+  .profile-details-section {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .detail-icon {
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3a7bd5;
+    font-size: 18px;
+  }
+  
+  .detail-content {
+    flex: 1;
+  }
+  
+  .detail-label {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 4px;
+  }
+  
+  .detail-value {
+    font-size: 16px;
+    color: #1a1a2e;
+    font-weight: 500;
+  }
+  
+  /* ID Proof section */
+  .id-proof-container {
+    grid-column: 1 / -1;
+    margin-top: 8px;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .id-proof-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .id-proof-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: #3a7bd5;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+  }
+  
+  .id-proof-button:hover {
+    background-color: #2a5db2;
+  }
+  
+  .id-proof-icon {
+    margin-right: 8px;
+  }
+  
+/* No user state */
+.no-user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 24px;
+    text-align: center;
+  }
+  
+  .no-user-icon {
+    font-size: 48px;
+    color: #95a5a6;
+    margin-bottom: 16px;
+  }
+  
+  .login-redirect-button {
+    margin-top: 24px;
+    padding: 10px 20px;
+    background-color: #3a7bd5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .login-redirect-button:hover {
+    background-color: #2a5db2;
+  }
